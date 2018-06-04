@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])  {
 	int addresslen = sizeof(address);
 
 	//example message
-	char* example_message = "Hello! This is the server.";
+	char* example_message = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
 
 	//initialize socket, name it to file descriptor server_fd
 	server_file_descriptor = socket(AF_INET, SOCK_STREAM,0);
